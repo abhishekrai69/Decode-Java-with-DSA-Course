@@ -72,10 +72,14 @@
 //     }
 // }
 
+                    // character data type
+import java.util.Scanner;
 public class Basics {
-
     public static void main(String[] args) {
-        double x=5/2;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter a character: ");
+        char ch = sc.next().charAt(0);
+        int x = (int)ch;
         System.out.println(x);
     }
 }
