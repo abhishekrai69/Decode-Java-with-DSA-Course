@@ -64,17 +64,41 @@
 
 
 //write a Java Program to Check If a Number is Divisible by 5 or not.
+// import java.util.Scanner;
+// public class EvenOdd {
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
+//         System.out.println("enter a positive number: ");
+//         int num = sc.nextInt();
+
+//         if (num % 5 == 0) {//check if it is divisible by 5
+//             System.out.println(num + " is divisible by 5.");
+//         } else {
+//             System.out.println(num + " is not divisible by 5.");
+//         }
+//     }
+// }
+
+
+//Write a Java program that takes a number as input, finds the sum of its digits, and checks if the sum is even or odd.
 import java.util.Scanner;
 public class EvenOdd {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("enter a positive number: ");
+        System.out.println("enter a number: ");
         int num = sc.nextInt();
 
-        if (num % 5 == 0) {//check if it is divisible by 5
-            System.out.println(num + " is divisible by 5.");
+        int sum = 0; //vaiable to store the sum of digits
+
+        while (num > 0) {
+            sum += num % 10; //extract last digit and add to sum
+            num /= 10; //remove last digit
+        }
+        // check if the sum is even or odd
+        if (sum % 2 == 0) {
+            System.out.println("the sum of digits is even.");
         } else {
-            System.out.println(num + " is not divisible by 5.");
+            System.out.println("the sum of digit is odd.");
         }
     }
 }
